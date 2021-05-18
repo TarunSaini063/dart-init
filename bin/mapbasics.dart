@@ -5,6 +5,6 @@ void main(List<String> arguments){
   map['Roll Number'] = '20174135';
   print(map);
   for(var i = 0; i<map.length; i++){
-    print(map.entries.iterator)
+    print(map.entries.iterator);
   }
 }
