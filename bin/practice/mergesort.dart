@@ -1,6 +1,6 @@
 import 'dart:io';
 void main(List<String> arguments){
-  var arr = new List<int>.empty(growable: true);
+  var arr = [];
   var n = int.parse(stdin.readLineSync());
   for(var i = 0; i<n; i++){
     arr.add(int.parse(stdin.readLineSync()));
