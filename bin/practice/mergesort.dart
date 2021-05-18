@@ -1,7 +1,7 @@
 import 'dart:io';
 void main(List<String> arguments){
+  var arr = new List<int>.empty(growable: true);
   var n = int.parse(stdin.readLineSync());
-  var arr = [];
   for(var i = 0; i<n; i++){
     arr.add(int.parse(stdin.readLineSync()));
   }
@@ -13,10 +13,10 @@ void mergeSort(var list,var start,var end){
     var mid = (start+end)~/2;
     mergeSort(list, start, mid);
     mergeSort(list, mid+1, end);
-    list = merge(list,start,mid,end);
+    merge(list,start,mid,end);
   }
 }
- List<dynamic> merge(var list,var start,var mid,var end){
+ void merge(var list,var start,var mid,var end){
   var l = mid - start +1;
   var r = end - mid;
   var L = [];
@@ -41,5 +41,4 @@ void mergeSort(var list,var start,var end){
   while(j<r){
     list[start++] = R[j++];
   }
-  return list;
 }
